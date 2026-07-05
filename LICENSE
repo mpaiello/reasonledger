@@ -1,0 +1,26 @@
+Reasonledger Specification and Documentation
+Copyright (c) 2026 Michael Patrick Aiello
+
+This work — the Reasonledger specification and its accompanying documentation —
+is licensed under the Creative Commons Attribution 4.0 International License
+(CC BY 4.0).
+
+You are free to:
+  - Share: copy and redistribute the material in any medium or format.
+  - Adapt: remix, transform, and build upon the material for any purpose,
+    including commercially.
+
+Under the following term:
+  - Attribution: you must give appropriate credit, provide a link to the
+    license, and indicate if changes were made. You may do so in any reasonable
+    manner, but not in any way that suggests the licensor endorses you or your
+    use.
+
+Attribution should credit:
+  Michael Patrick Aiello (ORCID 0009-0009-1429-9844),
+  "Reasonledger: Specification v1.0," https://doi.org/10.5281/zenodo.19874728
+
+The full legal code of CC BY 4.0 is incorporated by reference and is available
+at https://creativecommons.org/licenses/by/4.0/legalcode
+
+SPDX-License-Identifier: CC-BY-4.0

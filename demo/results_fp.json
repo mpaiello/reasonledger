@@ -1,0 +1,99 @@
+{
+  "config": {
+    "models": {
+      "strong": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+      "cheap": "Qwen/Qwen2.5-7B-Instruct-Turbo"
+    },
+    "n_clean": 30
+  },
+  "results": {
+    "strong": {
+      "rl/mechanical": {
+        "detect": 1.0,
+        "localize": 1.0,
+        "false_positive": 0.0,
+        "n_injected": 15,
+        "n_clean": 30
+      },
+      "rl/llm": {
+        "detect": 1.0,
+        "localize": 0.8,
+        "false_positive": 1.0,
+        "n_injected": 15,
+        "n_clean": 30
+      },
+      "json/mechanical": {
+        "detect": 1.0,
+        "localize": 1.0,
+        "false_positive": 0.0,
+        "n_injected": 15,
+        "n_clean": 30
+      },
+      "json/llm": {
+        "detect": 1.0,
+        "localize": 1.0,
+        "false_positive": 1.0,
+        "n_injected": 15,
+        "n_clean": 30
+      },
+      "prose/mechanical": {
+        "detect": 0.0,
+        "localize": 0.0,
+        "false_positive": 0.0,
+        "n_injected": 15,
+        "n_clean": 30
+      },
+      "prose/llm": {
+        "detect": 1.0,
+        "localize": 0.933,
+        "false_positive": 0.3,
+        "n_injected": 15,
+        "n_clean": 30
+      }
+    },
+    "cheap": {
+      "rl/mechanical": {
+        "detect": 1.0,
+        "localize": 1.0,
+        "false_positive": 0.0,
+        "n_injected": 15,
+        "n_clean": 30
+      },
+      "rl/llm": {
+        "detect": 0.0,
+        "localize": 0.0,
+        "false_positive": 0.0,
+        "n_injected": 15,
+        "n_clean": 30
+      },
+      "json/mechanical": {
+        "detect": 1.0,
+        "localize": 1.0,
+        "false_positive": 0.0,
+        "n_injected": 15,
+        "n_clean": 30
+      },
+      "json/llm": {
+        "detect": 0.067,
+        "localize": 0.067,
+        "false_positive": 0.0,
+        "n_injected": 15,
+        "n_clean": 30
+      },
+      "prose/mechanical": {
+        "detect": 0.0,
+        "localize": 0.0,
+        "false_positive": 0.0,
+        "n_injected": 15,
+        "n_clean": 30
+      },
+      "prose/llm": {
+        "detect": 0.067,
+        "localize": 0.067,
+        "false_positive": 0.0,
+        "n_injected": 15,
+        "n_clean": 30
+      }
+    }
+  }
+}

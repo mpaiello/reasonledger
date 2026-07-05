@@ -1,0 +1,50 @@
+Reasonledger
+============
+
+Originator: Michael Patrick Aiello (ORCID 0009-0009-1429-9844)
+Canonical repository: https://github.com/mpaiello/reasonledger
+Archive / DOI: https://doi.org/10.5281/zenodo.19874728
+
+Naming and lineage
+------------------
+Reasonledger is the standard developed and first documented under the name
+AI-Native Notation (ANN). The earlier name is retained here so that the
+authorship and priority record remains continuous across the rename.
+
+Priority and disclosure
+-----------------------
+A US provisional patent application (63/980,973) was filed on 2026-02-12,
+establishing an early, confidential priority record of the work. A provisional
+application is not a public disclosure. The first public disclosure of the
+specification was its publication in the project's canonical repository on
+2026-04-28. This consolidated standard release is dated 2026-06-30.
+
+The provisional application is being allowed to lapse. The public record
+(repository history and archived deposit) establishes both authorship and the
+priority of the disclosure, and serves as defensive publication so that the
+format remains open to all and cannot be enclosed by a later third-party patent.
+
+Open-standard terms
+-------------------
+Reasonledger is released as an open, royalty-free standard with no enforced
+patent encumbrance. It is intended to be freely implementable by anyone,
+including in commercial products.
+
+  - Specification and documentation: Creative Commons Attribution 4.0
+    International (CC BY 4.0). See LICENSE.
+  - Reference code: Apache License 2.0. See LICENSE-APACHE.
+
+Development disclosure
+----------------------
+Reasonledger was developed through human-directed, AI-assisted work. The
+specification and its validation were produced in collaboration with a large
+language model (Claude, Anthropic). This is disclosed for transparency and does
+not affect the terms above.
+
+Not a blockchain
+----------------
+"Ledger" refers to the auditable record the format produces across a transfer
+chain. Reasonledger involves no distributed ledger, token, chain, or consensus
+mechanism of any kind.
+
+Copyright (c) 2026 Michael Patrick Aiello.

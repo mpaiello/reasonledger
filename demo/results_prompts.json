@@ -1,0 +1,45 @@
+{
+  "config": {
+    "prompts": [
+      "descriptive",
+      "minimal",
+      "strict",
+      "precision"
+    ],
+    "formats": [
+      "rl"
+    ],
+    "n_clean": 30,
+    "models": {
+      "strong": "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+    }
+  },
+  "results": {
+    "strong": {
+      "descriptive/rl": {
+        "detect": 1.0,
+        "false_positive": 1.0,
+        "n_injected": 15,
+        "n_clean": 30
+      },
+      "minimal/rl": {
+        "detect": 0.867,
+        "false_positive": 0.267,
+        "n_injected": 15,
+        "n_clean": 30
+      },
+      "strict/rl": {
+        "detect": 0.933,
+        "false_positive": 0.0,
+        "n_injected": 15,
+        "n_clean": 30
+      },
+      "precision/rl": {
+        "detect": 0.333,
+        "false_positive": 0.0,
+        "n_injected": 15,
+        "n_clean": 30
+      }
+    }
+  }
+}

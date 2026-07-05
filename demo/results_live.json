@@ -1,0 +1,118 @@
+{
+  "config": {
+    "models": {
+      "strong": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+      "cheap": "Qwen/Qwen2.5-7B-Instruct-Turbo"
+    },
+    "temperature": 0.0,
+    "replicates": 1,
+    "chains": [
+      "orbital",
+      "logic"
+    ]
+  },
+  "results": {
+    "strong": {
+      "n_calls": 36,
+      "rates": {
+        "rl/mechanical": {
+          "detect": 1.0,
+          "localize": 1.0,
+          "false_positive": 0.0,
+          "n_injected": 10,
+          "n_clean": 2
+        },
+        "rl/llm": {
+          "detect": 1.0,
+          "localize": 1.0,
+          "false_positive": 1.0,
+          "n_injected": 10,
+          "n_clean": 2
+        },
+        "json/mechanical": {
+          "detect": 1.0,
+          "localize": 1.0,
+          "false_positive": 0.0,
+          "n_injected": 10,
+          "n_clean": 2
+        },
+        "json/llm": {
+          "detect": 1.0,
+          "localize": 0.9,
+          "false_positive": 1.0,
+          "n_injected": 10,
+          "n_clean": 2
+        },
+        "prose/mechanical": {
+          "detect": 0.0,
+          "localize": 0.0,
+          "false_positive": 0.0,
+          "n_injected": 10,
+          "n_clean": 2
+        },
+        "prose/llm": {
+          "detect": 1.0,
+          "localize": 1.0,
+          "false_positive": 1.0,
+          "n_injected": 10,
+          "n_clean": 2
+        }
+      },
+      "decision": {
+        "verdict": "WEAK GO / standard play",
+        "explanation": "RL ties info-matched JSON on detection (gap +0.00). Value is standardization and off-the-shelf checkability, not a detection edge. Pursue as an open standard and reference checker; do not build a detection-moat venture."
+      }
+    },
+    "cheap": {
+      "n_calls": 36,
+      "rates": {
+        "rl/mechanical": {
+          "detect": 1.0,
+          "localize": 1.0,
+          "false_positive": 0.0,
+          "n_injected": 10,
+          "n_clean": 2
+        },
+        "rl/llm": {
+          "detect": 0.1,
+          "localize": 0.0,
+          "false_positive": 0.0,
+          "n_injected": 10,
+          "n_clean": 2
+        },
+        "json/mechanical": {
+          "detect": 1.0,
+          "localize": 1.0,
+          "false_positive": 0.0,
+          "n_injected": 10,
+          "n_clean": 2
+        },
+        "json/llm": {
+          "detect": 0.0,
+          "localize": 0.0,
+          "false_positive": 0.0,
+          "n_injected": 10,
+          "n_clean": 2
+        },
+        "prose/mechanical": {
+          "detect": 0.0,
+          "localize": 0.0,
+          "false_positive": 0.0,
+          "n_injected": 10,
+          "n_clean": 2
+        },
+        "prose/llm": {
+          "detect": 0.0,
+          "localize": 0.0,
+          "false_positive": 0.0,
+          "n_injected": 10,
+          "n_clean": 2
+        }
+      },
+      "decision": {
+        "verdict": "WEAK GO / standard play",
+        "explanation": "RL ties info-matched JSON on detection (gap +0.10). Value is standardization and off-the-shelf checkability, not a detection edge. Pursue as an open standard and reference checker; do not build a detection-moat venture."
+      }
+    }
+  }
+}

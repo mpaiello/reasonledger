@@ -1,0 +1,64 @@
+; Reasonledger v1.0 — reference grammar (EBNF)
+; This grammar describes the block structure of a Reasonledger document.
+; It is a reference for implementers; the normative processing rules are in SPEC.md.
+
+document          = block , { blank-line , block } ;
+
+block             = header-line , { body-line } ;
+
+; ---- Block header ----------------------------------------------------------
+header-line       = "@" , block-type , [ ws , label ] , { ws , attribute } , newline ;
+
+block-type        = content-type | exchange-type | transfer-type ;
+
+content-type      = "FORMAL" | "LOGIC" | "DERIVE" | "TAXONOMY" | "ANCHOR" ;
+exchange-type     = "STATE" | "VERIFY" | "OUTPUT" ;
+transfer-type     = "PROVENANCE" | "TRANSFER_REPORT" | "DERIVATION_TRACE"
+                  | "SCOPE" | "CONFIDENCE" | "TRUST_TRANSFORMATION" ;
+
+label             = "[" , label-chars , "]" ;          ; e.g. [kepler_third], [§circular_velocity]
+label-chars       = ? one or more chars other than "]" ? ;
+
+attribute         = attr-name , ":" , ws , attr-value ;
+attr-name         = identifier ;
+attr-value        = identifier ;
+
+; @LOGIC MUST carry a basis attribute:
+logic-header      = "@LOGIC" , [ ws , label ] , ws , "basis" , ":" , ws , basis-value , newline ;
+basis-value       = "AXIOM" | "DERIVED" | "EMPIRICAL" ;
+
+; ---- Block bodies (selected normative forms) -------------------------------
+
+; @TAXONOMY: key/value classifications with a three-way status marker.
+taxonomy-entry    = key , ":" , ws , status , newline ;
+status            = "confirmed" | "open" | "denied" ;
+
+; @DERIVE: numbered steps terminating in a forced-conclusion marker.
+derive-step       = "(" , integer , ")" , ws , text , newline ;
+conclusion        = "→→" , ws , text , newline ;       ; a @DERIVE block MUST contain one conclusion
+
+; @VERIFY: per-step results using three result codes.
+verify-result     = step-ref , ":" , ws , result-code , [ ws , "—" , ws , reason ] , newline ;
+result-code       = "holds" | "fails" | "uncertain" ;
+
+; ---- References (content-based, position-independent) ----------------------
+formal-ref        = "@FORMAL[" , label-chars , "]" ;
+logic-ref         = "@LOGIC[" , label-chars , "]" ;
+derive-ref        = "§" , name , [ "(" , integer , ")" ] ;   ; §name or §name(3)
+taxonomy-ref      = "@TAXONOMY[" , label-chars , "]" ;
+scope-ref         = "@SCOPE[" , label-chars , "]" ;
+confidence-ref    = "@CONFIDENCE[" , label-chars , "]" ;
+step-ref          = derive-ref ;
+
+; ---- Lexical ----------------------------------------------------------------
+identifier        = letter , { letter | digit | "_" } ;
+key               = identifier ;
+name              = identifier ;
+integer           = digit , { digit } ;
+ws                = ? one or more spaces or tabs ? ;
+blank-line        = ? a line containing only whitespace ? ;
+newline           = ? end of line ? ;
+text              = ? arbitrary characters to end of line ? ;
+reason            = text ;
+letter            = "A".."Z" | "a".."z" ;
+digit             = "0".."9" ;

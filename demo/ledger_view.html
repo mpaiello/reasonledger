@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Reasoning Ledger — audit view</title><style>
+:root{--ink:#1c1917;--mut:#78716c;--line:#e7e5e4;--bg:#fafaf9;--card:#ffffff}
+*{box-sizing:border-box}
+body{font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:32px}
+.wrap{max-width:860px;margin:0 auto}
+h1{font-size:20px;margin:0 0 2px} .sub{color:var(--mut);margin:0 0 20px}
+.summary{background:var(--card);border:1px solid var(--line);border-radius:10px;
+padding:12px 16px;margin-bottom:20px}
+.hop{position:relative;background:var(--card);border:1px solid var(--line);
+border-radius:10px;padding:16px 18px;margin:0 0 14px}
+.hop.flag{border-color:#fca5a5;box-shadow:0 0 0 1px #fecaca inset}
+.hop h2{font-size:13px;letter-spacing:.03em;text-transform:uppercase;color:var(--mut);
+margin:0 0 10px}
+.row{display:flex;gap:8px;padding:3px 0;border-top:1px dashed var(--line)}
+.row:first-of-type{border-top:none}
+.k{color:var(--mut);min-width:150px;flex:0 0 150px}
+.v{flex:1}
+.status{font-weight:600}
+.badge{display:inline-block;color:#fff;font-size:11px;font-weight:600;border-radius:5px;
+padding:1px 7px;margin-left:8px;vertical-align:middle}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;font-size:12px;color:var(--mut)}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;
+margin-right:5px;vertical-align:middle;background:var(--dot)}
+code{background:#f5f5f4;border-radius:4px;padding:0 4px}
+</style></head><body><div class="wrap"><h1>Reasoning Ledger — audit view</h1><p class='sub'>chain &#x27;orbital&#x27; with injected constraint_drift at hop 2</p><div class='summary'><b>Mechanical audit:</b> 1 anomaly detected by mechanical audit. Highlights mark where the ledger's cross-hop consistency broke.</div><div class='hop '><h2>Hop 1</h2><div class='row'><div class='k'>constraint [energy]</div><div class='v'>for any closed system S, d/dt E(S) = 0 <code>AXIOM</code></div></div><div class='row'><div class='k'>derivation [circular_velocity]</div><div class='v'>&rarr;&rarr; v = sqrt(G*M / r)</div></div><div class='row'><div class='k'>claim [bound_orbit]</div><div class='v'><span class='status' style='color:#166534'>confirmed</span></div></div><div class='row'><div class='k'>claim [exact_eccentricity]</div><div class='v'><span class='status' style='color:#a16207'>open</span></div></div><div class='row'><div class='k'>claim [parabolic_escape]</div><div class='v'><span class='status' style='color:#991b1b'>denied</span></div></div><div class='row'><div class='k'>verify [circular_velocity]</div><div class='v'>1:holds, 2:holds, 3:holds, conclusion:holds</div></div><div class='row'><div class='k'>trust [circular_velocity]</div><div class='v'>verified</div></div><div class='row'><div class='k'>trust [kepler_third]</div><div class='v'>trusted</div></div></div><div class='hop flag'><h2>Hop 2</h2><div class='row'><div class='k'>constraint [energy]</div><div class='v'>for any system S, d/dt E(S) = 0 <code>AXIOM</code><span class="badge" style="background:#b45309">constraint drift</span></div></div><div class='row'><div class='k'>derivation [circular_velocity]</div><div class='v'>&rarr;&rarr; v = sqrt(G*M / r)</div></div><div class='row'><div class='k'>claim [bound_orbit]</div><div class='v'><span class='status' style='color:#166534'>confirmed</span></div></div><div class='row'><div class='k'>claim [exact_eccentricity]</div><div class='v'><span class='status' style='color:#a16207'>open</span></div></div><div class='row'><div class='k'>claim [parabolic_escape]</div><div class='v'><span class='status' style='color:#991b1b'>denied</span></div></div><div class='row'><div class='k'>verify [circular_velocity]</div><div class='v'>1:holds, 2:holds, 3:holds, conclusion:holds</div></div><div class='row'><div class='k'>trust [circular_velocity]</div><div class='v'>verified</div></div><div class='row'><div class='k'>trust [kepler_third]</div><div class='v'>trusted</div></div></div><div class='legend'><span style='--dot:#b45309'>constraint drift</span><span style='--dot:#b91c1c'>status inflation</span><span style='--dot:#7c3aed'>trust laundering</span><span style='--dot:#0e7490'>dangling reference</span><span style='--dot:#be123c'>verification inconsistency</span></div></div></body></html>

@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: "Reasonledger: Specification v1.0"
+message: "If you use this specification, please cite it as below."
+type: standard
+abstract: >-
+  Reasonledger is a notation for transferring reasoning between AI systems that
+  leaves an auditable record of the transfer. Named blocks carry explicit
+  processing instructions, and transfer-protocol blocks with a three-way
+  epistemic status accumulate into an inspectable ledger of what each model
+  claimed, verified, and accepted on trust across a multi-hop chain. Developed
+  and first disclosed as AI-Native Notation (ANN).
+authors:
+  - family-names: Aiello
+    given-names: Michael Patrick
+    orcid: "https://orcid.org/0009-0009-1429-9844"
+version: "1.0"
+date-released: "2026-06-30"
+license: CC-BY-4.0
+repository-code: "https://github.com/mpaiello/reasonledger"
+url: "https://github.com/mpaiello/reasonledger"
+doi: "10.5281/zenodo.19874728"
+keywords:
+  - AI-native notation
+  - multi-agent systems
+  - reasoning transfer
+  - provenance
+  - auditability
+  - epistemic status

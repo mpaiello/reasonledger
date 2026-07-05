@@ -1,0 +1,66 @@
+{
+  "config": {
+    "chains": [
+      "orbital",
+      "logic"
+    ],
+    "classes": [
+      "clean",
+      "constraint_drift",
+      "status_inflation",
+      "trust_laundering",
+      "dangling_reference",
+      "verification_inconsistency"
+    ],
+    "replicates": 10,
+    "auditor": "MOCK"
+  },
+  "rates": {
+    "rl/mechanical": {
+      "detect": 1.0,
+      "localize": 1.0,
+      "false_positive": 0.0,
+      "n_injected": 100,
+      "n_clean": 20
+    },
+    "rl/llm": {
+      "detect": 0.83,
+      "localize": 0.86,
+      "false_positive": 0.1,
+      "n_injected": 100,
+      "n_clean": 20
+    },
+    "json/mechanical": {
+      "detect": 1.0,
+      "localize": 1.0,
+      "false_positive": 0.0,
+      "n_injected": 100,
+      "n_clean": 20
+    },
+    "json/llm": {
+      "detect": 0.79,
+      "localize": 0.82,
+      "false_positive": 0.0,
+      "n_injected": 100,
+      "n_clean": 20
+    },
+    "prose/mechanical": {
+      "detect": 0.0,
+      "localize": 0.0,
+      "false_positive": 0.0,
+      "n_injected": 100,
+      "n_clean": 20
+    },
+    "prose/llm": {
+      "detect": 0.33,
+      "localize": 0.41,
+      "false_positive": 0.0,
+      "n_injected": 100,
+      "n_clean": 20
+    }
+  },
+  "decision_mock": {
+    "verdict": "WEAK GO / standard play",
+    "explanation": "RL ties info-matched JSON on detection (gap +0.04). Value is standardization and off-the-shelf checkability, not a detection edge. Pursue as an open standard and reference checker; do not build a detection-moat venture."
+  }
+}
