@@ -28,10 +28,10 @@ Full grammar and processing rules are in [`SPEC.md`](./SPEC.md).
 T² = (4π² / GM) · a³
 
 @DERIVE [circular_velocity]
-(1) For a circular orbit, gravity supplies centripetal force
-(2) GMm / r² = m v² / r
-(3) From (2): v² = GM / r
-→→ v = sqrt(GM / r)
+(1) For a circular orbit, gravity supplies the centripetal force
+(2) G·M·m / r² = m·v² / r
+(3) From (2): v² = G·M / r
+→→ v = sqrt(G·M / r)
 
 @TAXONOMY [orbit_properties]
 bound_orbit: confirmed
@@ -65,12 +65,14 @@ It exits non-zero and prints line-referenced errors on any violation. The valida
 
 The format has been exercised in author-run experiments across five model architectures, where all five adopted the notation in their own output and preserved the three-way epistemic status across multi-hop transfer. These are author-run results; independent replication is invited and has not yet been performed. Reasonledger makes no claim about model cognition.
 
-## Licensing
+## License
 
-- **Specification and documentation:** [CC BY 4.0](./LICENSE).
-- **Reference code:** [Apache 2.0](./LICENSE-APACHE).
+This repository is dual-licensed:
 
-Reasonledger is an open, royalty-free standard with no patent encumbrance. It is freely implementable by anyone, including in commercial products.
+- **Specification and documentation** (SPEC.md, grammar, prose docs) — Creative Commons Attribution 4.0 International (CC BY 4.0), see [`LICENSE-CC-BY-4.0`](./LICENSE-CC-BY-4.0).
+- **Code** (reference checker, evaluation harness, scripts) — Apache License 2.0, see [`LICENSE`](./LICENSE).
+
+Reasonledger is an open, royalty-free standard, freely implementable by anyone, including in commercial products.
 
 ## Citing
 
