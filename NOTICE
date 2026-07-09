@@ -3,48 +3,60 @@ Reasonledger
 
 Originator: Michael Patrick Aiello (ORCID 0009-0009-1429-9844)
 Canonical repository: https://github.com/mpaiello/reasonledger
-Archive / DOI: https://doi.org/10.5281/zenodo.19874728
+Archived deposit: https://doi.org/10.5281/zenodo.19874728 (concept DOI; resolves
+to the latest version. The v8.5 release is archived at
+https://doi.org/10.5281/zenodo.21277654.)
+
+Copyright 2026 Michael Patrick Aiello
+
+
+Licensing
+---------
+This repository is dual-licensed.
+
+  - Specification and documentation (SPEC.md, grammar/, and the prose
+    documentation): Creative Commons Attribution 4.0 International (CC BY 4.0);
+    see LICENSE-CC-BY-4.0.
+
+  - Reference checker, evaluation harness, and all source code (reference/,
+    demo/): Apache License, Version 2.0; see LICENSE.
+
 
 Naming and lineage
 ------------------
-Reasonledger is the standard developed and first documented under the name
-AI-Native Notation (ANN). The earlier name is retained here so that the
-authorship and priority record remains continuous across the rename.
+Reasonledger is the standard first developed and documented under the name
+AI-Native Notation (ANN). The earlier name is retained in the project history so
+that the authorship and priority record remains continuous across the rename.
 
-Priority and disclosure
------------------------
-A US provisional patent application (63/980,973) was filed on 2026-02-12,
-establishing an early, confidential priority record of the work. A provisional
-application is not a public disclosure. The first public disclosure of the
-specification was its publication in the project's canonical repository on
-2026-04-28. This consolidated standard release is dated 2026-06-30.
 
-The provisional application is being allowed to lapse. The public record
-(repository history and archived deposit) establishes both authorship and the
-priority of the disclosure, and serves as defensive publication so that the
-format remains open to all and cannot be enclosed by a later third-party patent.
+Open standard
+-------------
+Reasonledger is released as an open, royalty-free standard, intended to be freely
+implementable by anyone, including in commercial products, under the licenses
+above.
 
-Open-standard terms
--------------------
-Reasonledger is released as an open, royalty-free standard with no enforced
-patent encumbrance. It is intended to be freely implementable by anyone,
-including in commercial products.
 
-  - Specification and documentation: Creative Commons Attribution 4.0
-    International (CC BY 4.0). See LICENSE.
-  - Reference code: Apache License 2.0. See LICENSE-APACHE.
+Patent
+------
+A US provisional patent application (63/980,973) was filed on 2026-02-12. The
+decision whether to convert it to a non-provisional application before the
+2026-02-12 deadline in 2027 is open. The specification and reference
+implementation are published in this public repository and archived on Zenodo;
+that public record documents the authorship and the date of public disclosure.
 
-Development disclosure
-----------------------
-Reasonledger was developed through human-directed, AI-assisted work. The
-specification and its validation were produced in collaboration with a large
-language model (Claude, Anthropic). This is disclosed for transparency and does
-not affect the terms above.
+
+Development
+-----------
+Reasonledger was developed through human-directed work. The author conceived the
+standard, specified the notation, designed the studies, and is responsible for
+all content. A large language model (Claude, Anthropic) was used as an
+instrument under the author's direction to assist with drafting, implementing the
+author's specifications in code, and copy-editing. This is disclosed for
+transparency and does not affect the licenses above.
+
 
 Not a blockchain
 ----------------
-"Ledger" refers to the auditable record the format produces across a transfer
-chain. Reasonledger involves no distributed ledger, token, chain, or consensus
-mechanism of any kind.
-
-Copyright (c) 2026 Michael Patrick Aiello.
+"Ledger" refers to the auditable record the format produces across a reasoning
+transfer chain. Reasonledger involves no distributed ledger, token, chain, or
+consensus mechanism of any kind.
