@@ -82,4 +82,4 @@ See [`CITATION.cff`](./CITATION.cff). Short form:
 
 ## Lineage
 
-Reasonledger was developed and first disclosed as **AI-Native Notation (ANN)**. The earlier name is retained in the provenance record for citation and priority; see [`NOTICE`](./NOTICE) and Section 13 of the specification.
+Reasonledger was developed and first disclosed as **AI-Native Notation (ANN)**. The earlier name is retained in the provenance record for citation and priority; see [`NOTICE`](./NOTICE) and the specification's naming and lineage section.
